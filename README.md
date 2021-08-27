@@ -12,7 +12,7 @@
 ## How to Run  
 
 main.R  
-`Rscript main.R 2021 T`
+`Rscript -e "rmarkdown::render('main.R', params = list(year=2021, skipscrape='Yes'),output_file='test_run.html',clean=TRUE)"`
 
 ## To Do 
 
