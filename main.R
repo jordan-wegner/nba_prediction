@@ -12,6 +12,8 @@
 #'    value: x
 #'  skipscrape:
 #'    value: x
+#'  skiprosters:
+#'    value: x
 #'  rookies:
 #'    value: x
 #'  model_name:
@@ -22,9 +24,14 @@
 #' ---
 
 #+ setup, echo = F, results = 'hide', warning=F, error=F, message=F
+# 
+# year <- as.character(params$year)
+# skipscrape <- as.character(params$skipscrape)
+# skiprosters <- as.character(params$skiprosters)
 
-year <- as.character(params$year)
-skipscrape <- as.character(params$skipscrape)
+year <- "2021"
+skipscrape <- "Yes"
+skiprosters <- "Yes"
 
 # Set up logging
 library(logging)
@@ -42,11 +49,18 @@ seasonID <- paste0(year,upcomingSeason)
 loginfo("New Season")
 loginfo(paste("Year:",year))
 
+
+if (skiprosters=="Yes"){
+  loginfo("reading modded roster")
+  rosters <- read.csv(paste0("rostersMOD_",seasonID,".csv"))
+} else {
 # scraping new rosters
 loginfo("scraping upcoming season rosters")
+logwarn("MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER")
 source('new_roster_scrape.R')
 rosters <- newRosters(year)
 loginfo("roster scrape complete")
+}
 
 if (skipscrape=="Yes"){
   

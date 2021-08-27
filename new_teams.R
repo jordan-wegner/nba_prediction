@@ -2,6 +2,8 @@
 
 newTeam <- function(stats, roster){
   
+  suppressMessages(library(tidyverse))
+  
   players <- stats
   rosters <- roster
   
