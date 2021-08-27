@@ -15,7 +15,7 @@
 #' 
 #' ---
 
-#+ setup, echo = F, results = 'hide'
+#+ setup, echo = F, results = 'hide', warning=F, error=F, message=F
 
 year <- as.character(params$year)
 skipscrape <- as.character(params$skipscrape)

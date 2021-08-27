@@ -1,0 +1,30 @@
+2021-08-27 17:41:58 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-08-27 run.log
+2021-08-27 17:41:58 INFO::New Season
+2021-08-27 17:41:58 INFO::Year: 2021
+2021-08-27 17:41:58 INFO::scraping upcoming season rosters
+2021-08-27 17:42:05 INFO::roster scrape complete
+2021-08-27 17:42:05 INFO::reading players_20212022.csv
+2021-08-27 17:42:06 INFO::assigning current teams via new roster scrape, cleaning data, and lagging by a season.
+2021-08-27 17:42:06 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-08-27 17:42:06 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-08-27 17:42:06 INFO::attaching rosters to players statistics
+2021-08-27 17:42:06 INFO::removing one year players and rookies
+2021-08-27 17:42:06 INFO::player trades cause problems. Time to remove.
+2021-08-27 17:42:06 INFO::lagging performance by one season
+2021-08-27 17:42:09 INFO::binding current season statistics and prior season statistics
+2021-08-27 17:42:09 INFO::data check
+2021-08-27 17:42:09 INFO::dropping all current season statistics
+2021-08-27 17:42:09 INFO::creating data set that drops players with no prior year, ie rookies
+2021-08-27 17:42:09 INFO::creating set that keeps the rookies
+2021-08-27 17:42:09 INFO::writing lagged data sets
+2021-08-27 17:42:09 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-08-27 17:42:09 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-08-27 17:42:10 INFO::aggregating no rookies data set
+2021-08-27 17:42:10 INFO::aggregating rookies included data set
+2021-08-27 17:42:11 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-08-27 17:42:11 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-08-27 17:42:11 INFO::adding playoff wins to no rookies data set
+2021-08-27 17:42:11 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-08-27 17:42:11 INFO::adding playoff wins to data set with rookies
+2021-08-27 17:42:11 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-08-27 17:42:11 INFO::writing modeling data sets to .csv
