@@ -1,0 +1,93 @@
+2021-08-27 17:01:17 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-08-27 run.log
+2021-08-27 17:01:17 INFO::New Season
+2021-08-27 17:01:17 INFO::Year: 2021
+2021-08-27 17:01:17 INFO::scraping upcoming season rosters
+2021-08-27 17:02:47 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-08-27 run.log
+2021-08-27 17:02:47 INFO::New Season
+2021-08-27 17:02:47 INFO::Year: 2021
+2021-08-27 17:02:47 INFO::scraping upcoming season rosters
+2021-08-27 17:03:25 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-08-27 run.log
+2021-08-27 17:03:25 INFO::New Season
+2021-08-27 17:03:25 INFO::Year: 2021
+2021-08-27 17:03:25 INFO::scraping upcoming season rosters
+2021-08-27 17:03:37 INFO::roster scrape complete
+2021-08-27 17:03:37 INFO::Loading libraries
+2021-08-27 17:03:37 INFO::URL counting data: https://www.basketball-reference.com/leagues/NBA_2021_per_game.html
+2021-08-27 17:03:37 INFO::URL advanced data: https://www.basketball-reference.com/leagues/NBA_2021_advanced.html
+2021-08-27 17:03:37 INFO::scraping per game data
+2021-08-27 17:03:40 INFO::scraping advanced data
+2021-08-27 17:03:45 INFO::naming advanced data
+2021-08-27 17:03:45 INFO::dropping redundant columns
+2021-08-27 17:03:45 INFO::merging advanced and per game data
+2021-08-27 17:03:45 INFO::2021 data scrape complete
+2021-08-27 17:06:18 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-08-27 run.log
+2021-08-27 17:06:18 INFO::New Season
+2021-08-27 17:06:18 INFO::Year: 2021
+2021-08-27 17:06:18 INFO::scraping upcoming season rosters
+2021-08-27 17:06:26 INFO::roster scrape complete
+2021-08-27 17:06:26 INFO::Loading libraries
+2021-08-27 17:06:26 INFO::URL counting data: https://www.basketball-reference.com/leagues/NBA_2021_per_game.html
+2021-08-27 17:06:26 INFO::URL advanced data: https://www.basketball-reference.com/leagues/NBA_2021_advanced.html
+2021-08-27 17:06:26 INFO::scraping per game data
+2021-08-27 17:06:31 INFO::scraping advanced data
+2021-08-27 17:06:35 INFO::naming advanced data
+2021-08-27 17:06:35 INFO::dropping redundant columns
+2021-08-27 17:06:35 INFO::merging advanced and per game data
+2021-08-27 17:06:35 INFO::2021 data scrape complete
+2021-08-27 17:08:11 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-08-27 run.log
+2021-08-27 17:08:11 INFO::New Season
+2021-08-27 17:08:11 INFO::Year: 2021
+2021-08-27 17:08:11 INFO::scraping upcoming season rosters
+2021-08-27 17:08:18 INFO::roster scrape complete
+2021-08-27 17:08:18 INFO::Loading libraries
+2021-08-27 17:08:18 INFO::URL counting data: https://www.basketball-reference.com/leagues/NBA_2021_per_game.html
+2021-08-27 17:08:18 INFO::URL advanced data: https://www.basketball-reference.com/leagues/NBA_2021_advanced.html
+2021-08-27 17:08:18 INFO::scraping per game data
+2021-08-27 17:08:22 INFO::scraping advanced data
+2021-08-27 17:08:26 INFO::naming advanced data
+2021-08-27 17:08:26 INFO::dropping redundant columns
+2021-08-27 17:08:26 INFO::merging advanced and per game data
+2021-08-27 17:08:26 INFO::2021 data scrape complete
+2021-08-27 17:09:12 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-08-27 run.log
+2021-08-27 17:09:12 INFO::New Season
+2021-08-27 17:09:12 INFO::Year: 2021
+2021-08-27 17:09:12 INFO::scraping upcoming season rosters
+2021-08-27 17:09:18 INFO::roster scrape complete
+2021-08-27 17:09:18 INFO::Loading libraries
+2021-08-27 17:09:18 INFO::URL counting data: https://www.basketball-reference.com/leagues/NBA_2021_per_game.html
+2021-08-27 17:09:18 INFO::URL advanced data: https://www.basketball-reference.com/leagues/NBA_2021_advanced.html
+2021-08-27 17:09:18 INFO::scraping per game data
+2021-08-27 17:09:22 INFO::scraping advanced data
+2021-08-27 17:09:24 INFO::naming advanced data
+2021-08-27 17:09:24 INFO::dropping redundant columns
+2021-08-27 17:09:24 INFO::merging advanced and per game data
+2021-08-27 17:09:24 INFO::2021 data scrape complete
+2021-08-27 17:09:25 INFO::Scraping NBA playoff counts as of the 2021 Finals
+2021-08-27 17:09:33 INFO::writing playoff wins data set as playoff_wins.csv
+2021-08-27 17:09:33 INFO::loading players_20202021.csv
+2021-08-27 17:09:33 INFO::combining previous seasons with current (just finished) season
+2021-08-27 17:09:33 INFO::writing players_20212022.csv
+2021-08-27 17:09:34 INFO::assigning current teams via new roster scrape, cleaning data, and lagging by a season.
+2021-08-27 17:09:34 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-08-27 17:09:34 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-08-27 17:09:34 INFO::attaching rosters to players statistics
+2021-08-27 17:09:34 INFO::removing one year players and rookies
+2021-08-27 17:09:34 INFO::player trades cause problems. Time to remove.
+2021-08-27 17:09:34 INFO::lagging performance by one season
+2021-08-27 17:09:37 INFO::binding current season statistics and prior season statistics
+2021-08-27 17:09:37 INFO::data check
+2021-08-27 17:09:37 INFO::dropping all current season statistics
+2021-08-27 17:09:37 INFO::creating data set that drops players with no prior year, ie rookies
+2021-08-27 17:09:37 INFO::creating set that keeps the rookies
+2021-08-27 17:09:38 INFO::writing lagged data sets
+2021-08-27 17:09:38 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-08-27 17:09:38 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-08-27 17:09:38 INFO::aggregating no rookies data set
+2021-08-27 17:09:39 INFO::aggregating rookies included data set
+2021-08-27 17:09:40 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-08-27 17:09:40 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-08-27 17:09:40 INFO::adding playoff wins to no rookies data set
+2021-08-27 17:09:40 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-08-27 17:09:40 INFO::adding playoff wins to data set with rookies
+2021-08-27 17:09:40 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-08-27 17:09:40 INFO::writing modeling data sets to .csv
