@@ -15,7 +15,7 @@
 #' 
 #' ---
 
-#+ setup, echo = F
+#+ setup, echo = F, results = 'hide'
 
 year <- as.character(params$year)
 skipscrape <- as.character(params$skipscrape)
@@ -44,7 +44,7 @@ loginfo("roster scrape complete")
 
 if (skipscrape=="Yes"){
   
-  source("skipscrape.R")
+  source("skip_scrape.R")
   
 } else if (skipscrape=="No"){
   
@@ -61,15 +61,15 @@ if (skipscrape=="Yes"){
   source("loading_history.R")
   histNBA <- historyUntilNow(year)
   
+  # combining old and new data 
+  source("data_merging.R")
+  players <- oldNew(histNBA,nba)
+  
+  # writing data out with new season
+  source("writing_new_data.R")
+  writingNew(players, year)
+  
 }
-
-# combining old and new data 
-source("data_merging.R")
-players <- oldNew(histNBA,nba)
-
-# writing data out with new season
-source("writing_new_data.R")
-writingNew(players, year)
 
 # adding current team via new rosters 
 source("new_teams.R")
