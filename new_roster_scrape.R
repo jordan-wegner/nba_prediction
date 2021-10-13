@@ -47,7 +47,7 @@ newRosters <- function(year){
   # labelling them for the upcoming season
   rosters$year <- upcomingSeason
   
-  write.csv(rosters, paste0("rosters_",seasonID,".csv"))
+  write.csv(rosters, paste0("rosters_",seasonID,".csv"), row.names = F)
   
   return(rosters)
 }
