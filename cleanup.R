@@ -1,5 +1,6 @@
 cleanup <- function(ddata){
-  
+
+
   p3 <- ddata
   
   loginfo("removing one year players and rookies")
@@ -14,8 +15,10 @@ cleanup <- function(ddata){
   
   # removing when player name/year combo is more than 1 because the year thing causes issues 
   player_names <- paste0(p4$Player, p4$year)
+  p4$player_names <- player_names
   name_count <- data.frame(table(player_names))
-  p4 <- p4[-which(name_count$Freq > 1), ]
-  
-  return(p4)
+  p5 <- left_join(p4, name_count, by = c("player_names" = "player_names"))
+  p5 <- p5[-which(p5$Freq > 1), ]
+
+  return(p5)
 }

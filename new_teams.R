@@ -7,7 +7,7 @@ newTeam <- function(stats, roster){
   players <- stats
   rosters <- roster
   
-  loginfo("assigning current teams via new roster scrape, cleaning data, and lagging by a season.")
+  loginfo("assigning current teams via new roster scrape, cleaning data")
   loginfo("dropping rows with a TOT assignment as a result of being traded")
   
   p2 <- players %>% filter(!Tm == 'TOT')

@@ -25,13 +25,13 @@
 
 #+ setup, echo = F, results = 'hide', warning=F, error=F, message=F
 # 
-# year <- as.character(params$year)
-# skipscrape <- as.character(params$skipscrape)
-# skiprosters <- as.character(params$skiprosters)
+year <- as.character(params$year)
+skipscrape <- as.character(params$skipscrape)
+skiprosters <- as.character(params$skiprosters)
 
 year <- "2021"
 skipscrape <- "Yes"
-skiprosters <- "Yes"
+skiprosters <- "No"
 
 # Set up logging
 library(logging)
@@ -62,6 +62,10 @@ rosters <- newRosters(year)
 loginfo("roster scrape complete")
 }
 
+loginfo("Data check: Dallas Mavericks Roster")
+loginfo(print(rosters %>% filter(Tm == "DAL")))
+print(rosters %>% filter(Tm == "DAL"))
+
 if (skipscrape=="Yes"){
   
   source("skip_scrape.R")
@@ -91,18 +95,34 @@ if (skipscrape=="Yes"){
   
 }
 
+loginfo("data check - Blake Griffin")
+loginfo(print(players %>% filter(Player == "Blake Griffin") %>% subset(select = c(Player, Tm, PTS, year))))
+print(players %>% filter(Player == "Blake Griffin") %>% subset(select = c(Player, Tm, PTS, year)))
+
 # adding current team via new rosters 
 source("new_teams.R")
 p3 <- newTeam(players,rosters)
+
+loginfo("data check - Blake")
+loginfo(print(p3 %>% filter(Player == "Blake Griffin") %>% subset(select = c(Player, Tm, PTS, year))))
+print(p3 %>% filter(Player == "Blake Griffin") %>% subset(select = c(Player, Tm, PTS, year)))
 
 # cleaning up rookies, single year players, and traded players who cannot be lagged 
 # IMP potential
 source("cleanup.R")
 p4 <- cleanup(p3)
 
+loginfo("data check - Blake")
+loginfo(print(p4 %>% filter(Player == "Blake Griffin") %>% subset(select = c(Player, Tm, PTS, year))))
+print(p4 %>% filter(Player == "Blake Griffin") %>% subset(select = c(Player, Tm, PTS, year)))
+
 # lagging by one year
 source("lagging.R")
 bound_test <- lagging(p4)
+
+loginfo("data check - Blake")
+loginfo(print(bound_test %>% filter(Player == "Blake Griffin") %>% subset(select = c(Player, Tm, PTS_prior, year))))
+print(bound_test %>% filter(Player == "Blake Griffin") %>% subset(select = c(Player, Tm, PTS_prior, year)))
 
 # set with no rookies for comparison 
 source("no_rookies.R")
@@ -140,6 +160,10 @@ loginfo("adding playoff wins to no rookies data set")
 nba2NR <- addWins(nba_agg2NR)
 loginfo("adding playoff wins to data set with rookies")
 nba2R <- addWins(nba_agg2R)
+
+loginfo("data check - wins")
+print(nba2NR %>% filter(tm == "DAL_2011" | tm == "MIL_2021") %>% subset(select = c(tm, won)))
+print(nba2R %>% filter(tm == "DAL_2011" | tm == "MIL_2021") %>% subset(select = c(tm, won)))
 
 loginfo("writing modeling data sets to .csv")
 write.csv(nba2NR, paste0("modeling_no_rookies_",seasonID,".csv"), row.names = F)
