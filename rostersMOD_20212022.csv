@@ -27,39 +27,38 @@ Bradley Beal,WAS,2022
 Corey Kispert,WAS,2022
 Kentavious Caldwell-Pope,WAS,2022
 Aaron Holiday,WAS,2022
-Jay Huff,WAS,2022
+Isaiah Todd,WAS,2022
 Anthony Gill,WAS,2022
 Rui Hachimura,WAS,2022
-Isaiah Todd,WAS,2022
+Jordan Goodwin,WAS,2022
 Deni Avdija,WAS,2022
 Daniel Gafford,WAS,2022
-Jordan Goodwin,WAS,2022
+Cassius Winston  (TW),WAS,2022
 Kyle Kuzma,WAS,2022
 Thomas Bryant,WAS,2022
-Cassius Winston  (TW),WAS,2022
+Devontae Shuler,WAS,2022
 Spencer Dinwiddie,WAS,2022
 Dāvis Bertāns,WAS,2022
-Jordan Schakel,WAS,2022
-Ishmail Wainright,TOR,2022
-OG Anunoby,TOR,2022
-Isaac Bonga,TOR,2022
-Pascal Siakam,TOR,2022
 Justin Champagnie  (TW),TOR,2022
+OG Anunoby,TOR,2022
+Alex Antetokounmpo,TOR,2022
+Pascal Siakam,TOR,2022
+Sam Dekker,TOR,2022
 Yuta Watanabe,TOR,2022
 Goran Dragić,TOR,2022
-Sam Dekker,TOR,2022
-Freddie Gillespie,TOR,2022
-Fred VanVleet,TOR,2022
 Dalano Banton,TOR,2022
 Khem Birch,TOR,2022
-Precious Achiuwa,TOR,2022
-Sviatoslav Mykhailiuk,TOR,2022
+Fred VanVleet,TOR,2022
+Svi Mykhailiuk,TOR,2022
 David Johnson  (TW),TOR,2022
-Chris Boucher,TOR,2022
-Reggie Perry,TOR,2022
-Scottie Barnes,TOR,2022
-Malachi Flynn,TOR,2022
+Precious Achiuwa,TOR,2022
 Gary Trent Jr.,TOR,2022
+Scottie Barnes,TOR,2022
+Chris Boucher,TOR,2022
+Isaac Bonga,TOR,2022
+Ishmail Wainright,TOR,2022
+Malachi Flynn,TOR,2022
+Josh Hall,TOR,2022
 Aaron Henry  (TW),PHI,2022
 Isaiah Joe,PHI,2022
 Joel Embiid,PHI,2022
@@ -100,35 +99,32 @@ Cole Anthony,ORL,2022
 Admiral Schofield,ORL,2022
 Evan Fournier,NYK,2022
 Miles McBride,NYK,2022
-Myles Powell,NYK,2022
 Kevin Knox,NYK,2022
-Dwayne Bacon,NYK,2022
+Aamir Simms,NYK,2022
 Quentin Grimes,NYK,2022
 Mitchell Robinson,NYK,2022
-Aamir Simms,NYK,2022
+Taj Gibson,NYK,2022
 Jericho Sims  (TW),NYK,2022
 RJ Barrett,NYK,2022
-Taj Gibson,NYK,2022
+Derrick Rose,NYK,2022
 Nerlens Noel,NYK,2022
 Julius Randle,NYK,2022
-Derrick Rose,NYK,2022
+M.J. Walker,NYK,2022
 Kemba Walker,NYK,2022
 Obi Toppin,NYK,2022
-M.J. Walker,NYK,2022
+Wayne Selden,NYK,2022
 Alec Burks,NYK,2022
 Immanuel Quickley,NYK,2022
-Wayne Selden,NYK,2022
+Brandon Goodwin,NYK,2022
 George Hill,MIL,2022
 Bobby Portis,MIL,2022
-Elijah Bryant,MIL,2022
+Jalen Lecque,MIL,2022
 Grayson Allen,MIL,2022
 Bobby Portis,MIL,2022
 Giannis Antetokounmpo,MIL,2022
-Jemerrio Jones,MIL,2022
 Donte DiVincenzo,MIL,2022
 Georgios Kalaitzakis,MIL,2022
 Jrue Holiday,MIL,2022
-Jemerrio Jones,MIL,2022
 Brook Lopez,MIL,2022
 Thanasis Antetokounmpo,MIL,2022
 Sandro Mamukelashvili  (TW),MIL,2022
@@ -142,9 +138,11 @@ Jordan Nwora,MIL,2022
 Javin DeLaurier  (TW),MIL,2022
 Solomon Hill,ATL,2022
 Onyeka Okongwu,ATL,2022
+Ibi Watson,ATL,2022
 Trae Young,ATL,2022
 Sharife Cooper  (TW),ATL,2022
 Bogdan Bogdanović,ATL,2022
+Ibi Watson,ATL,2022
 Kevin Huerter,ATL,2022
 Gorgui Dieng,ATL,2022
 Danilo Gallinari,ATL,2022
@@ -182,9 +180,11 @@ Goga Bitadze,IND,2022
 Nate Hinton,IND,2022
 Lauri Markkanen,CLE,2022
 Dean Wade,CLE,2022
+Justin James,CLE,2022
 Kevin Love,CLE,2022
 RJ Nembhard,CLE,2022
 Isaac Okoro,CLE,2022
+Ed Davis,CLE,2022
 Taurean Prince,CLE,2022
 Mitch Ballock,CLE,2022
 Isaiah Hartenstein,CLE,2022
@@ -233,7 +233,6 @@ Bruce Brown,BRK,2022
 Kevin Durant,BRK,2022
 Paul Millsap,BRK,2022
 DeAndre' Bembry,BRK,2022
-Kyrie Irving,BRK,2022
 Devontae Cacok,BRK,2022
 Patty Mills,BRK,2022
 Joe Harris,BRK,2022
@@ -272,10 +271,9 @@ Cody Martin,CHO,2022
 Kelly Oubre Jr.,CHO,2022
 James Bouknight,CHO,2022
 Jalen McDaniels,CHO,2022
-Jalen Crutcher,CHO,2022
+LiAngelo Ball,CHO,2022
 Kai Jones,CHO,2022
 Gordon Hayward,CHO,2022
-Cameron McGriff,CHO,2022
 Cory Joseph,DET,2022
 Trey Lyles,DET,2022
 Jared Cunningham,DET,2022
@@ -298,7 +296,7 @@ Kelly Olynyk,DET,2022
 Cassius Stanley,DET,2022
 Kris Dunn,MEM,2022
 Jarrett Culver,MEM,2022
-Romeo Weems,MEM,2022
+Matthew Hurt,MEM,2022
 Steven Adams,MEM,2022
 Xavier Tillman Sr.,MEM,2022
 Brandon Clarke,MEM,2022
@@ -315,11 +313,10 @@ Kyle Anderson,MEM,2022
 Killian Tillie  (TW),MEM,2022
 Desmond Bane,MEM,2022
 Ja Morant,MEM,2022
-Sean McDermott,MEM,2022
+Ahmad Caver,MEM,2022
 Bones Hyland,DEN,2022
 Bol Bol,DEN,2022
 Tarik Black,DEN,2022
-Jamal Murray,DEN,2022
 Jeff Green,DEN,2022
 Vlatko Čančar,DEN,2022
 Davon Reed,DEN,2022
@@ -343,6 +340,7 @@ Josh Green,DAL,2022
 Dwight Powell,DAL,2022
 Sterling Brown,DAL,2022
 Trey Burke,DAL,2022
+Luka Dončić,DAL,2022
 Boban Marjanović,DAL,2022
 Willie Cauley-Stein,DAL,2022
 Jalen Brunson,DAL,2022
@@ -393,9 +391,10 @@ Jonas Valančiūnas,NOP,2022
 Josh Hart,NOP,2022
 Trey Murphy III,NOP,2022
 Kira Lewis Jr.,NOP,2022
+John Petty Jr.,NOP,2022
 Otto Porter,GSW,2022
 Damion Lee,GSW,2022
-Quinndary Weatherspoon,GSW,2022
+L.J. Figueroa,GSW,2022
 Stephen Curry,GSW,2022
 Nemanja Bjelica,GSW,2022
 Mychal Mulder,GSW,2022
@@ -431,6 +430,7 @@ Luguentz Dort,OKC,2022
 D.J. Wilson,OKC,2022
 Josh Giddey,OKC,2022
 Kenrich Williams,OKC,2022
+Scotty Hopson,OKC,2022
 Dwight Howard,LAL,2022
 Kent Bazemore,LAL,2022
 Russell Westbrook,LAL,2022
@@ -446,28 +446,26 @@ Joel Ayayi  (TW),LAL,2022
 Cameron Oliver,LAL,2022
 Trevor Ariza,LAL,2022
 Austin Reaves,LAL,2022
-Cameron Oliver,LAL,2022
+Sekou Doumbouya  (TW),LAL,2022
 Wayne Ellington,LAL,2022
 Carmelo Anthony,LAL,2022
-Sekou Doumbouya  (TW),LAL,2022
+Chaundee Brown Jr.,LAL,2022
 Reggie Jackson,LAC,2022
 Luke Kennard,LAC,2022
 Eric Bledsoe,LAC,2022
 Nicolas Batum,LAC,2022
 Keon Johnson,LAC,2022
 Terance Mann,LAC,2022
-George King,LAC,2022
+Harry Giles,LAC,2022
 Justise Winslow,LAC,2022
 Ivica Zubac,LAC,2022
-Harry Giles,LAC,2022
+Isaiah Hartenstein,LAC,2022
 Brandon Boston Jr.,LAC,2022
 Marcus Morris,LAC,2022
-Moses Wright,LAC,2022
+Amir Coffey  (TW),LAC,2022
 Jason Preston,LAC,2022
 Serge Ibaka,LAC,2022
-Isaiah Hartenstein,LAC,2022
 Paul George,LAC,2022
-Amir Coffey  (TW),LAC,2022
 Frank Kaminsky,PHO,2022
 Jae Crowder,PHO,2022
 Devin Booker,PHO,2022
@@ -546,23 +544,23 @@ Royce O'Neale,UTA,2022
 Trent Forrest  (TW),UTA,2022
 Elijah Hughes,UTA,2022
 Joe Ingles,UTA,2022
-MaCio Teague,UTA,2022
+Malik Fitts,UTA,2022
 Donovan Mitchell,UTA,2022
 Eric Paschall,UTA,2022
-Derrick Alston Jr.,UTA,2022
+Nino Johnson,UTA,2022
 Rudy Gobert,UTA,2022
 Miye Oni,UTA,2022
-Malik Fitts,UTA,2022
 Rudy Gay,UTA,2022
 Bojan Bogdanović,UTA,2022
-Marques Bolden,UTA,2022
 Hassan Whiteside,UTA,2022
 Jordan Clarkson,UTA,2022
 Alperen Şengün,HOU,2022
 Jae'Sean Tate,HOU,2022
+Armoni Brooks,HOU,2022
 John Wall,HOU,2022
 David Nwaba,HOU,2022
 D.J. Augustin,HOU,2022
+Marcus Foster,HOU,2022
 Eric Gordon,HOU,2022
 Usman Garuba,HOU,2022
 Kenyon Martin Jr.,HOU,2022
@@ -576,5 +574,5 @@ Avery Bradley,HOU,2022
 Dante Exum,HOU,2022
 Josh Christopher,HOU,2022
 Christian Wood,HOU,2022
-Tyler Bey  (TW),HOU,2022
-Kawhi Leonard,LAC,2022
+Armoni Brooks,HOU,2022
+Kyrie Irving,BRK,2022

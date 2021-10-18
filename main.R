@@ -29,9 +29,11 @@ year <- as.character(params$year)
 skipscrape <- as.character(params$skipscrape)
 skiprosters <- as.character(params$skiprosters)
 
-year <- "2021"
-skipscrape <- "Yes"
-skiprosters <- "No"
+suppressMessages(library(tidyverse))
+
+# year <- "2021"
+# skipscrape <- "Yes"
+# skiprosters <- "No"
 
 # Set up logging
 library(logging)
@@ -262,13 +264,13 @@ nba_champ <- sqldf("SELECT team FROM predictions_year
                   LIMIT 1")
 
 #' ## Eastern Conference 
-#' **Eastern Conference Champion**: `r ec_champ`   
+#' **Eastern Conference Champion: `r ec_champ`**   
 #' **Atlantic Division Champion**: `r atl_champ`   
 #' **Southeast Division Champion**: `r se_champ`   
 #' **Central Division Champion**: `r ce_champ`   
 #'   
 #' ## Western Conference 
-#' **Western Conference Champion**: `r wc_champ`   
+#' **Western Conference Champion: `r wc_champ`**   
 #' **Northwest Division Champion**: `r nw_champ`   
 #' **Southwest Division Champion**: `r sw_champ`   
 #' **Pacific Division Champion**: `r pac_champ`   
