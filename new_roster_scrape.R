@@ -11,8 +11,10 @@ newRosters <- function(year){
   base_url <- "https://www.basketball-reference.com"
   
   # adding year to current season to get upcoming rosters 
+  # year = '2021'
   upcomingSeason <- as.character(as.integer(year)+1)
   seasonID <- paste0(year,upcomingSeason)
+  
   
   # getting the tail urls for every team roster 
   pages <- read_html(file.path(base_url)) %>%

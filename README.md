@@ -12,7 +12,7 @@
 ## How to Run  
 
 main.R  
-`Rscript -e "rmarkdown::render('main.R', params = list(year=2021, skipscrape='Yes',rookies='Yes', model_name='pcr_model.rds', num_comp=47, skiprosters='Yes'),output_file='test_run.html',clean=TRUE)"`
+`Rscript -e "rmarkdown::render('main.R', params = list(year=2021, skipscrape='Yes',rookies='Yes', model_name='pcr_model.rds', num_comp=47, skiprosters='Yes',playoffs='Yes'),output_file='test_run.html',clean=TRUE)"`
 
 ## To Do 
 

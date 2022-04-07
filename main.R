@@ -20,6 +20,8 @@
 #'    value: x
 #'  num_comp:
 #'    value: x
+#'  playoffs:
+#'    value: x
 #' 
 #' ---
 
@@ -28,6 +30,7 @@
 year <- as.character(params$year)
 skipscrape <- as.character(params$skipscrape)
 skiprosters <- as.character(params$skiprosters)
+playoffs = as.character(params$playoffs)
 
 suppressMessages(library(tidyverse))
 
@@ -76,7 +79,7 @@ if (skipscrape=="Yes"){
   
   # scraping most recent year data 
   source('most_recent_year_scrape.R')
-  nba <- mostRecentYear(year)
+  nba <- mostRecentYear(year,playoffs)
   loginfo(paste(year, 'data scrape complete'))
   
   # getting playoff counts 

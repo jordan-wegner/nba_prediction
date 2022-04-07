@@ -1,4 +1,4 @@
-mostRecentYear <- function(yr){
+mostRecentYear <- function(yr,playoffs="No"){
   
   loginfo("Loading libraries")
   
@@ -8,6 +8,12 @@ mostRecentYear <- function(yr){
   suppressMessages(library(XML))
   
   source("get_page.R")
+  
+  if (playoffs=="Yes"){
+    
+    yr = as.character(as.numeric(yr)+1)
+    
+  }
   
   url_pg <- paste0('https://www.basketball-reference.com/leagues/NBA_', yr, '_per_game.html')
   url_adv <- paste0('https://www.basketball-reference.com/leagues/NBA_', yr, '_advanced.html')
