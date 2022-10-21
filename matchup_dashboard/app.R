@@ -14,7 +14,7 @@ library(lessR)
 library(sqldf)
 
 
-nba <- read.csv('/Users/jordanwegner/Desktop/nba2/predictions/2021-10-18-predictions.csv')
+nba <- read.csv('/Users/jordanwegner/Desktop/nba2/predictions/2022-10-17-predictions.csv')
 teams <- nba$ab
 
 
