@@ -1,0 +1,29 @@
+2022-04-07 18:37:53 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2022-04-07 run.log
+2022-04-07 18:37:56 INFO::Loading libraries
+2022-04-07 18:38:03 INFO::Loading libraries
+2022-04-07 18:38:03 INFO::URL counting data: https://www.basketball-reference.com/leagues/NBA_2021_per_game.html
+2022-04-07 18:38:03 INFO::URL advanced data: https://www.basketball-reference.com/leagues/NBA_2021_advanced.html
+2022-04-07 18:38:03 INFO::scraping per game data
+2022-04-07 18:38:07 INFO::scraping advanced data
+2022-04-07 18:38:12 INFO::naming advanced data
+2022-04-07 18:38:12 INFO::dropping redundant columns
+2022-04-07 18:38:12 INFO::merging advanced and per game data
+2022-04-07 18:38:19 INFO::Loading libraries
+2022-04-07 18:38:19 INFO::URL counting data: https://www.basketball-reference.com/leagues/NBA_2021_per_game.html
+2022-04-07 18:38:19 INFO::URL advanced data: https://www.basketball-reference.com/leagues/NBA_2021_advanced.html
+2022-04-07 18:38:19 INFO::scraping per game data
+2022-04-07 18:38:23 INFO::scraping advanced data
+2022-04-07 18:38:28 INFO::naming advanced data
+2022-04-07 18:38:28 INFO::dropping redundant columns
+2022-04-07 18:38:28 INFO::merging advanced and per game data
+2022-04-07 18:43:02 INFO::Loading libraries
+2022-04-07 18:43:02 INFO::URL counting data: https://www.basketball-reference.com/leagues/NBA_2021_per_game.html
+2022-04-07 18:43:02 INFO::URL advanced data: https://www.basketball-reference.com/leagues/NBA_2021_advanced.html
+2022-04-07 18:43:02 INFO::scraping per game data
+2022-04-07 18:43:06 INFO::scraping advanced data
+2022-04-07 18:43:09 INFO::naming advanced data
+2022-04-07 18:43:09 INFO::dropping redundant columns
+2022-04-07 18:43:09 INFO::merging advanced and per game data
+2022-04-07 18:48:13 INFO::creating data set that drops players with no prior year, ie rookies
+2022-04-07 18:48:47 INFO::creating data set that drops players with no prior year, ie rookies
+2022-04-07 18:49:07 INFO::creating data set that drops players with no prior year, ie rookies

@@ -1,0 +1,69 @@
+2022-10-17 18:19:27 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2022-10-17 run.log
+2022-10-17 18:19:27 INFO::New Season
+2022-10-17 18:19:27 INFO::Year: 2022
+2022-10-17 18:19:27 INFO::scraping upcoming season rosters
+2022-10-17 18:19:27 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2022-10-17 18:19:33 INFO::roster scrape complete
+2022-10-17 18:19:33 INFO::Data check: Dallas Mavericks Roster
+2022-10-17 18:19:33 INFO::print(rosters %>% filter(Tm == "DAL")): c("Dwight Powell", "Maxi Kleber", "Dāvis Bertāns", "Christian Wood", "Josh Green", "Spencer Dinwiddie", "Reggie Bullock", "Luka Dončić", "Tim Hardaway Jr.", "Frank Ntilikina", "Dorian Finney-Smith", "Theo Pinson", "Jaden Hardy", "JaVale McGee", "Tyler Dorsey  (TW)", "McKinley Wright IV")
+ 2022-10-17 18:19:33 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2022-10-17 18:19:33 INFO::print(rosters %>% filter(Tm == "DAL")): c("2023", "2023", "2023", "2023", "2023", "2023", "2023", "2023", "2023", "2023", "2023", "2023", "2023", "2023", "2023", "2023")
+2022-10-17 18:19:33 INFO::Loading libraries
+2022-10-17 18:19:33 INFO::URL counting data: https://www.basketball-reference.com/leagues/NBA_2022_per_game.html
+2022-10-17 18:19:33 INFO::URL advanced data: https://www.basketball-reference.com/leagues/NBA_2022_advanced.html
+2022-10-17 18:19:33 INFO::scraping per game data
+2022-10-17 18:19:37 INFO::scraping advanced data
+2022-10-17 18:19:41 INFO::naming advanced data
+2022-10-17 18:19:41 INFO::dropping redundant columns
+2022-10-17 18:19:41 INFO::merging advanced and per game data
+2022-10-17 18:19:41 INFO::2022 data scrape complete
+2022-10-17 18:19:41 INFO::Scraping NBA playoff counts as of the 2022 Finals
+2022-10-17 18:19:53 INFO::writing playoff wins data set as playoff_wins.csv
+2022-10-17 18:19:53 INFO::loading players_20212022.csv
+2022-10-17 18:19:53 INFO::combining previous seasons with current (just finished) season
+2022-10-17 18:19:54 INFO::writing players_20222023.csv
+2022-10-17 18:19:55 INFO::data check - Blake Griffin
+2022-10-17 18:19:55 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2022-10-17 18:19:55 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT", "BRK")
+ 2022-10-17 18:19:55 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11, 6.4)
+ 2022-10-17 18:19:55 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021, 2022)
+2022-10-17 18:19:55 INFO::assigning current teams via new roster scrape, cleaning data
+2022-10-17 18:19:55 INFO::dropping rows with a TOT assignment as a result of being traded
+2022-10-17 18:19:55 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2022-10-17 18:19:55 INFO::attaching rosters to players statistics
+2022-10-17 18:19:55 INFO::data check - Blake
+2022-10-17 18:19:55 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2022-10-17 18:19:55 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK", "BOS")
+ 2022-10-17 18:19:55 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, 6.4, NA)
+ 2022-10-17 18:19:55 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2018", "2019", "2020", "2021", "2021", "2022", "2023")
+2022-10-17 18:19:55 INFO::removing one year players and rookies
+2022-10-17 18:19:55 INFO::player trades cause problems. Time to remove.
+2022-10-17 18:19:55 INFO::data check - Blake
+2022-10-17 18:19:55 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2022-10-17 18:19:55 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK", "BOS")
+ 2022-10-17 18:19:55 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, 6.4, NA)
+ 2022-10-17 18:19:55 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022", "2023")
+2022-10-17 18:19:55 INFO::lagging performance by one season
+2022-10-17 18:19:58 INFO::binding current season statistics and prior season statistics
+2022-10-17 18:19:58 INFO::data check
+2022-10-17 18:19:58 INFO::dropping all current season statistics
+2022-10-17 18:19:58 INFO::data check - Blake
+2022-10-17 18:19:58 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2022-10-17 18:19:58 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK", "BOS")
+ 2022-10-17 18:19:58 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, 6.4)
+ 2022-10-17 18:19:58 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022", "2023")
+2022-10-17 18:19:58 INFO::creating data set that drops players with no prior year, ie rookies
+2022-10-17 18:19:59 INFO::creating set that keeps the rookies
+2022-10-17 18:19:59 INFO::writing lagged data sets
+2022-10-17 18:19:59 INFO::writing per_game_and_advanced_lagged_no_rookies_20222023.csv
+2022-10-17 18:19:59 INFO::writing per_game_and_advanced_lagged_with_rookies_20222023.csv
+2022-10-17 18:20:00 INFO::aggregating no rookies data set
+2022-10-17 18:20:00 INFO::aggregating rookies included data set
+2022-10-17 18:20:01 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2022-10-17 18:20:01 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2022-10-17 18:20:01 INFO::adding playoff wins to no rookies data set
+2022-10-17 18:20:01 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2022-10-17 18:20:01 INFO::adding playoff wins to data set with rookies
+2022-10-17 18:20:01 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2022-10-17 18:20:01 INFO::data check - wins
+2022-10-17 18:20:01 INFO::writing modeling data sets to .csv

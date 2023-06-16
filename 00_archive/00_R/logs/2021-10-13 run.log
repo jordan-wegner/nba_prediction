@@ -1,0 +1,238 @@
+2021-10-13 18:56:03 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-13 run.log
+2021-10-13 18:56:03 INFO::New Season
+2021-10-13 18:56:03 INFO::Year: 2021
+2021-10-13 18:56:03 INFO::scraping upcoming season rosters
+2021-10-13 18:56:03 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2021-10-13 18:56:13 INFO::roster scrape complete
+2021-10-13 18:56:13 INFO::reading players_20212022.csv
+2021-10-13 18:56:13 INFO::assigning current teams via new roster scrape, cleaning data, and lagging by a season.
+2021-10-13 18:56:13 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-13 18:56:13 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-13 18:56:13 INFO::attaching rosters to players statistics
+2021-10-13 18:56:13 INFO::removing one year players and rookies
+2021-10-13 18:56:14 INFO::player trades cause problems. Time to remove.
+2021-10-13 18:56:14 INFO::lagging performance by one season
+2021-10-13 18:56:17 INFO::binding current season statistics and prior season statistics
+2021-10-13 18:56:17 INFO::data check
+2021-10-13 18:56:17 INFO::dropping all current season statistics
+2021-10-13 18:56:17 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-13 18:56:17 INFO::creating set that keeps the rookies
+2021-10-13 18:56:17 INFO::writing lagged data sets
+2021-10-13 18:56:17 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-13 18:56:17 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-13 18:56:18 INFO::aggregating no rookies data set
+2021-10-13 18:56:18 INFO::aggregating rookies included data set
+2021-10-13 18:56:19 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-13 18:56:19 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-13 18:56:19 INFO::adding playoff wins to no rookies data set
+2021-10-13 18:56:19 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 18:56:19 INFO::adding playoff wins to data set with rookies
+2021-10-13 18:56:19 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 18:56:19 INFO::writing modeling data sets to .csv
+2021-10-13 19:07:33 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-13 run.log
+2021-10-13 19:07:33 INFO::New Season
+2021-10-13 19:07:33 INFO::Year: 2021
+2021-10-13 19:07:33 INFO::scraping upcoming season rosters
+2021-10-13 19:07:33 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2021-10-13 19:07:46 INFO::roster scrape complete
+2021-10-13 19:07:46 INFO::reading players_20212022.csv
+2021-10-13 19:07:46 INFO::assigning current teams via new roster scrape, cleaning data, and lagging by a season.
+2021-10-13 19:07:46 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-13 19:07:46 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-13 19:07:46 INFO::attaching rosters to players statistics
+2021-10-13 19:07:47 INFO::removing one year players and rookies
+2021-10-13 19:07:47 INFO::player trades cause problems. Time to remove.
+2021-10-13 19:07:47 INFO::lagging performance by one season
+2021-10-13 19:07:52 INFO::binding current season statistics and prior season statistics
+2021-10-13 19:07:52 INFO::data check
+2021-10-13 19:07:52 INFO::dropping all current season statistics
+2021-10-13 19:07:52 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-13 19:07:52 INFO::creating set that keeps the rookies
+2021-10-13 19:07:53 INFO::writing lagged data sets
+2021-10-13 19:07:53 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-13 19:07:54 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-13 19:07:54 INFO::aggregating no rookies data set
+2021-10-13 19:07:56 INFO::aggregating rookies included data set
+2021-10-13 19:07:57 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-13 19:07:57 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-13 19:07:57 INFO::adding playoff wins to no rookies data set
+2021-10-13 19:07:57 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:07:57 INFO::adding playoff wins to data set with rookies
+2021-10-13 19:07:57 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:07:57 INFO::writing modeling data sets to .csv
+2021-10-13 19:08:19 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-13 run.log
+2021-10-13 19:08:19 INFO::New Season
+2021-10-13 19:08:19 INFO::Year: 2021
+2021-10-13 19:08:19 INFO::reading modded roster
+2021-10-13 19:08:19 INFO::reading players_20212022.csv
+2021-10-13 19:08:22 INFO::assigning current teams via new roster scrape, cleaning data, and lagging by a season.
+2021-10-13 19:08:22 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-13 19:08:22 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-13 19:08:22 INFO::attaching rosters to players statistics
+2021-10-13 19:08:22 INFO::removing one year players and rookies
+2021-10-13 19:08:22 INFO::player trades cause problems. Time to remove.
+2021-10-13 19:08:22 INFO::lagging performance by one season
+2021-10-13 19:08:27 INFO::binding current season statistics and prior season statistics
+2021-10-13 19:08:27 INFO::data check
+2021-10-13 19:08:27 INFO::dropping all current season statistics
+2021-10-13 19:08:27 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-13 19:08:27 INFO::creating set that keeps the rookies
+2021-10-13 19:08:27 INFO::writing lagged data sets
+2021-10-13 19:08:27 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-13 19:08:28 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-13 19:08:28 INFO::aggregating no rookies data set
+2021-10-13 19:08:29 INFO::aggregating rookies included data set
+2021-10-13 19:08:31 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-13 19:08:31 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-13 19:08:31 INFO::adding playoff wins to no rookies data set
+2021-10-13 19:08:31 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:08:31 INFO::adding playoff wins to data set with rookies
+2021-10-13 19:08:31 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:08:31 INFO::writing modeling data sets to .csv
+2021-10-13 19:13:40 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-13 run.log
+2021-10-13 19:13:40 INFO::New Season
+2021-10-13 19:13:40 INFO::Year: 2021
+2021-10-13 19:13:40 INFO::scraping upcoming season rosters
+2021-10-13 19:13:40 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2021-10-13 19:13:51 INFO::roster scrape complete
+2021-10-13 19:13:51 INFO::reading players_20212022.csv
+2021-10-13 19:13:52 INFO::assigning current teams via new roster scrape, cleaning data, and lagging by a season.
+2021-10-13 19:13:52 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-13 19:13:52 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-13 19:13:52 INFO::attaching rosters to players statistics
+2021-10-13 19:13:52 INFO::removing one year players and rookies
+2021-10-13 19:13:52 INFO::player trades cause problems. Time to remove.
+2021-10-13 19:13:52 INFO::lagging performance by one season
+2021-10-13 19:13:57 INFO::binding current season statistics and prior season statistics
+2021-10-13 19:13:57 INFO::data check
+2021-10-13 19:13:57 INFO::dropping all current season statistics
+2021-10-13 19:13:57 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-13 19:13:57 INFO::creating set that keeps the rookies
+2021-10-13 19:13:57 INFO::writing lagged data sets
+2021-10-13 19:13:57 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-13 19:13:58 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-13 19:13:58 INFO::aggregating no rookies data set
+2021-10-13 19:14:00 INFO::aggregating rookies included data set
+2021-10-13 19:14:01 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-13 19:14:01 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-13 19:14:01 INFO::adding playoff wins to no rookies data set
+2021-10-13 19:14:01 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:14:01 INFO::adding playoff wins to data set with rookies
+2021-10-13 19:14:01 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:14:01 INFO::writing modeling data sets to .csv
+2021-10-13 19:14:30 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-13 run.log
+2021-10-13 19:14:30 INFO::New Season
+2021-10-13 19:14:30 INFO::Year: 2021
+2021-10-13 19:14:30 INFO::reading modded roster
+2021-10-13 19:14:30 INFO::reading players_20212022.csv
+2021-10-13 19:14:33 INFO::assigning current teams via new roster scrape, cleaning data, and lagging by a season.
+2021-10-13 19:14:33 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-13 19:14:33 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-13 19:14:33 INFO::attaching rosters to players statistics
+2021-10-13 19:14:33 INFO::removing one year players and rookies
+2021-10-13 19:14:33 INFO::player trades cause problems. Time to remove.
+2021-10-13 19:14:33 INFO::lagging performance by one season
+2021-10-13 19:14:38 INFO::binding current season statistics and prior season statistics
+2021-10-13 19:14:38 INFO::data check
+2021-10-13 19:14:38 INFO::dropping all current season statistics
+2021-10-13 19:14:38 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-13 19:14:38 INFO::creating set that keeps the rookies
+2021-10-13 19:14:39 INFO::writing lagged data sets
+2021-10-13 19:14:39 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-13 19:14:39 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-13 19:14:40 INFO::aggregating no rookies data set
+2021-10-13 19:14:41 INFO::aggregating rookies included data set
+2021-10-13 19:14:42 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-13 19:14:42 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-13 19:14:42 INFO::adding playoff wins to no rookies data set
+2021-10-13 19:14:42 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:14:42 INFO::adding playoff wins to data set with rookies
+2021-10-13 19:14:42 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:14:42 INFO::writing modeling data sets to .csv
+2021-10-13 19:18:28 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-13 run.log
+2021-10-13 19:18:28 INFO::New Season
+2021-10-13 19:18:28 INFO::Year: 2021
+2021-10-13 19:18:28 INFO::reading modded roster
+2021-10-13 19:18:28 INFO::reading players_20212022.csv
+2021-10-13 19:18:31 INFO::assigning current teams via new roster scrape, cleaning data, and lagging by a season.
+2021-10-13 19:18:31 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-13 19:18:31 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-13 19:18:31 INFO::attaching rosters to players statistics
+2021-10-13 19:18:31 INFO::removing one year players and rookies
+2021-10-13 19:18:31 INFO::player trades cause problems. Time to remove.
+2021-10-13 19:18:31 INFO::lagging performance by one season
+2021-10-13 19:18:36 INFO::binding current season statistics and prior season statistics
+2021-10-13 19:18:36 INFO::data check
+2021-10-13 19:18:36 INFO::dropping all current season statistics
+2021-10-13 19:18:36 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-13 19:18:36 INFO::creating set that keeps the rookies
+2021-10-13 19:18:36 INFO::writing lagged data sets
+2021-10-13 19:18:36 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-13 19:18:37 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-13 19:18:37 INFO::aggregating no rookies data set
+2021-10-13 19:18:38 INFO::aggregating rookies included data set
+2021-10-13 19:18:39 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-13 19:18:39 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-13 19:18:39 INFO::adding playoff wins to no rookies data set
+2021-10-13 19:18:39 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:18:39 INFO::adding playoff wins to data set with rookies
+2021-10-13 19:18:39 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:18:39 INFO::writing modeling data sets to .csv
+2021-10-13 19:20:27 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-13 run.log
+2021-10-13 19:20:28 INFO::New Season
+2021-10-13 19:20:28 INFO::Year: 2021
+2021-10-13 19:20:28 INFO::reading modded roster
+2021-10-13 19:20:28 INFO::reading players_20212022.csv
+2021-10-13 19:20:30 INFO::assigning current teams via new roster scrape, cleaning data, and lagging by a season.
+2021-10-13 19:20:30 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-13 19:20:30 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-13 19:20:30 INFO::attaching rosters to players statistics
+2021-10-13 19:20:31 INFO::removing one year players and rookies
+2021-10-13 19:20:31 INFO::player trades cause problems. Time to remove.
+2021-10-13 19:20:31 INFO::lagging performance by one season
+2021-10-13 19:20:35 INFO::binding current season statistics and prior season statistics
+2021-10-13 19:20:35 INFO::data check
+2021-10-13 19:20:35 INFO::dropping all current season statistics
+2021-10-13 19:20:35 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-13 19:20:35 INFO::creating set that keeps the rookies
+2021-10-13 19:20:36 INFO::writing lagged data sets
+2021-10-13 19:20:36 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-13 19:20:36 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-13 19:20:37 INFO::aggregating no rookies data set
+2021-10-13 19:20:38 INFO::aggregating rookies included data set
+2021-10-13 19:20:39 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-13 19:20:39 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-13 19:20:39 INFO::adding playoff wins to no rookies data set
+2021-10-13 19:20:39 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:20:39 INFO::adding playoff wins to data set with rookies
+2021-10-13 19:20:39 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:20:39 INFO::writing modeling data sets to .csv
+2021-10-13 19:22:57 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-13 run.log
+2021-10-13 19:22:58 INFO::New Season
+2021-10-13 19:22:58 INFO::Year: 2021
+2021-10-13 19:22:58 INFO::reading modded roster
+2021-10-13 19:22:58 INFO::reading players_20212022.csv
+2021-10-13 19:23:00 INFO::assigning current teams via new roster scrape, cleaning data, and lagging by a season.
+2021-10-13 19:23:00 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-13 19:23:00 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-13 19:23:00 INFO::attaching rosters to players statistics
+2021-10-13 19:23:01 INFO::removing one year players and rookies
+2021-10-13 19:23:01 INFO::player trades cause problems. Time to remove.
+2021-10-13 19:23:01 INFO::lagging performance by one season
+2021-10-13 19:23:05 INFO::binding current season statistics and prior season statistics
+2021-10-13 19:23:05 INFO::data check
+2021-10-13 19:23:05 INFO::dropping all current season statistics
+2021-10-13 19:23:05 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-13 19:23:05 INFO::creating set that keeps the rookies
+2021-10-13 19:23:06 INFO::writing lagged data sets
+2021-10-13 19:23:06 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-13 19:23:07 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-13 19:23:07 INFO::aggregating no rookies data set
+2021-10-13 19:23:08 INFO::aggregating rookies included data set
+2021-10-13 19:23:10 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-13 19:23:10 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-13 19:23:10 INFO::adding playoff wins to no rookies data set
+2021-10-13 19:23:10 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:23:10 INFO::adding playoff wins to data set with rookies
+2021-10-13 19:23:10 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-13 19:23:10 INFO::writing modeling data sets to .csv

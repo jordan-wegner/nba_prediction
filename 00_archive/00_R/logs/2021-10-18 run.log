@@ -1,0 +1,575 @@
+2021-10-18 15:49:54 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 15:50:03 INFO::New Season
+2021-10-18 15:50:04 INFO::Year: 2021
+2021-10-18 15:52:19 INFO::scraping upcoming season rosters
+2021-10-18 15:52:19 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2021-10-18 15:52:30 INFO::roster scrape complete
+2021-10-18 15:53:57 INFO::rosters %>% filter(Tm == "DAL"): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Luka Dončić", "Boban Marjanović", "Willie Cauley-Stein", "Jalen Brunson", "Eugene Omoruyi  (TW)", "Tyrell Terry", "Maxi Kleber", "JaQuori McLaughlin  (TW)", "Moses Brown", "Dorian Finney-Smith", "Frank Ntilikina", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 15:53:57 INFO::rosters %>% filter(Tm == "DAL"): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 15:53:57 INFO::rosters %>% filter(Tm == "DAL"): c("2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022")
+2021-10-18 15:54:39 INFO::print(rosters %>% filter(Tm == "DAL")): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Luka Dončić", "Boban Marjanović", "Willie Cauley-Stein", "Jalen Brunson", "Eugene Omoruyi  (TW)", "Tyrell Terry", "Maxi Kleber", "JaQuori McLaughlin  (TW)", "Moses Brown", "Dorian Finney-Smith", "Frank Ntilikina", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 15:54:39 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 15:54:39 INFO::print(rosters %>% filter(Tm == "DAL")): c("2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022")
+2021-10-18 15:56:10 INFO::reading players_20212022.csv
+2021-10-18 15:59:46 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 15:59:46 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 15:59:46 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 15:59:46 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:01:22 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:01:22 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:01:22 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:01:22 INFO::attaching rosters to players statistics
+2021-10-18 16:01:56 INFO::data check - Blake
+2021-10-18 16:01:57 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:01:57 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:01:57 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:01:57 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2018", "2019", "2020", "2021", "2021", "2022")
+2021-10-18 16:04:56 INFO::removing one year players and rookies
+2021-10-18 16:04:57 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:05:13 INFO::data check - Blake
+2021-10-18 16:05:14 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:05:14 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:05:14 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:05:14 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2018", "2018", "2019", "2020", "2021", "2021", "2022")
+2021-10-18 16:06:57 INFO::removing one year players and rookies
+2021-10-18 16:06:57 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:07:01 INFO::data check - Blake
+2021-10-18 16:07:04 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:07:04 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:07:04 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:07:04 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2018", "2018", "2019", "2020", "2021", "2021", "2022")
+2021-10-18 16:07:21 INFO::lagging performance by one season
+2021-10-18 16:07:24 INFO::binding current season statistics and prior season statistics
+2021-10-18 16:07:24 INFO::data check
+2021-10-18 16:07:24 INFO::dropping all current season statistics
+2021-10-18 16:07:56 INFO::data check - Blake
+2021-10-18 16:08:22 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:08:22 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:08:22 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 19.8, 22.6, 24.5, 15.5, 10, 12.3)
+ 2021-10-18 16:08:22 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("2011", "2012", "2013", "2014", "2015", "2018", "2018", "2019", "2020", "2021", "2021", "2022")
+2021-10-18 16:09:01 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:09:01 INFO::New Season
+2021-10-18 16:09:01 INFO::Year: 2021
+2021-10-18 16:09:01 INFO::scraping upcoming season rosters
+2021-10-18 16:09:01 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2021-10-18 16:09:09 INFO::roster scrape complete
+2021-10-18 16:09:09 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:09:09 INFO::print(rosters %>% filter(Tm == "DAL")): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Luka Dončić", "Boban Marjanović", "Willie Cauley-Stein", "Jalen Brunson", "Eugene Omoruyi  (TW)", "Tyrell Terry", "Maxi Kleber", "JaQuori McLaughlin  (TW)", "Moses Brown", "Dorian Finney-Smith", "Frank Ntilikina", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 16:09:09 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 16:09:09 INFO::print(rosters %>% filter(Tm == "DAL")): c("2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022")
+2021-10-18 16:09:09 INFO::reading players_20212022.csv
+2021-10-18 16:09:09 INFO::data check - Blake Griffin
+2021-10-18 16:09:09 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:09:09 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 16:09:09 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 16:09:09 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:09:09 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:09:09 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:09:09 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:09:09 INFO::attaching rosters to players statistics
+2021-10-18 16:09:09 INFO::data check - Blake
+2021-10-18 16:09:09 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:09:09 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:09:09 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:09:09 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2018", "2019", "2020", "2021", "2021", "2022")
+2021-10-18 16:10:18 INFO::removing one year players and rookies
+2021-10-18 16:16:40 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:16:40 INFO::New Season
+2021-10-18 16:16:40 INFO::Year: 2021
+2021-10-18 16:16:40 INFO::scraping upcoming season rosters
+2021-10-18 16:16:40 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2021-10-18 16:16:48 INFO::roster scrape complete
+2021-10-18 16:16:48 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:16:48 INFO::print(rosters %>% filter(Tm == "DAL")): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Luka Dončić", "Boban Marjanović", "Willie Cauley-Stein", "Jalen Brunson", "Eugene Omoruyi  (TW)", "Tyrell Terry", "Maxi Kleber", "JaQuori McLaughlin  (TW)", "Moses Brown", "Dorian Finney-Smith", "Frank Ntilikina", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 16:16:48 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 16:16:48 INFO::print(rosters %>% filter(Tm == "DAL")): c("2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022")
+2021-10-18 16:16:48 INFO::reading players_20212022.csv
+2021-10-18 16:16:49 INFO::data check - Blake Griffin
+2021-10-18 16:16:49 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:16:49 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 16:16:49 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 16:16:49 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:16:49 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:16:49 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:16:49 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:16:49 INFO::attaching rosters to players statistics
+2021-10-18 16:16:49 INFO::data check - Blake
+2021-10-18 16:16:49 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:16:49 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:16:49 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:16:49 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2018", "2019", "2020", "2021", "2021", "2022")
+2021-10-18 16:17:13 INFO::removing one year players and rookies
+2021-10-18 16:17:13 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:17:18 INFO::data check - Blake
+2021-10-18 16:17:18 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:17:18 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:17:18 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, NA)
+ 2021-10-18 16:17:18 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022")
+2021-10-18 16:18:17 INFO::lagging performance by one season
+2021-10-18 16:18:20 INFO::binding current season statistics and prior season statistics
+2021-10-18 16:18:20 INFO::data check
+2021-10-18 16:18:20 INFO::dropping all current season statistics
+2021-10-18 16:18:23 INFO::data check - Blake
+2021-10-18 16:18:24 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:18:24 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:18:24 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5)
+ 2021-10-18 16:18:24 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022")
+2021-10-18 16:19:04 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-18 16:19:07 INFO::creating set that keeps the rookies
+2021-10-18 16:19:11 INFO::writing lagged data sets
+2021-10-18 16:19:11 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-18 16:19:11 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-18 16:19:18 INFO::aggregating no rookies data set
+2021-10-18 16:19:19 INFO::aggregating rookies included data set
+2021-10-18 16:19:22 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-18 16:19:23 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-18 16:19:24 INFO::adding playoff wins to no rookies data set
+2021-10-18 16:19:25 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:19:25 INFO::adding playoff wins to data set with rookies
+2021-10-18 16:19:27 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:21:08 INFO::writing modeling data sets to .csv
+2021-10-18 16:32:06 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:32:06 INFO::New Season
+2021-10-18 16:32:06 INFO::Year: 2021
+2021-10-18 16:32:06 INFO::scraping upcoming season rosters
+2021-10-18 16:32:06 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2021-10-18 16:32:16 INFO::roster scrape complete
+2021-10-18 16:32:16 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:32:16 INFO::print(rosters %>% filter(Tm == "DAL")): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Luka Dončić", "Boban Marjanović", "Willie Cauley-Stein", "Jalen Brunson", "Eugene Omoruyi  (TW)", "Tyrell Terry", "Maxi Kleber", "JaQuori McLaughlin  (TW)", "Moses Brown", "Dorian Finney-Smith", "Frank Ntilikina", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 16:32:16 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 16:32:16 INFO::print(rosters %>% filter(Tm == "DAL")): c("2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022")
+2021-10-18 16:32:16 INFO::reading players_20212022.csv
+2021-10-18 16:32:16 INFO::data check - Blake Griffin
+2021-10-18 16:32:16 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:32:16 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 16:32:16 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 16:32:16 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:32:17 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:32:17 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:32:17 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:32:17 INFO::attaching rosters to players statistics
+2021-10-18 16:32:17 INFO::data check - Blake
+2021-10-18 16:32:17 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:32:17 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:32:17 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:32:17 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2018", "2019", "2020", "2021", "2021", "2022")
+2021-10-18 16:32:17 INFO::removing one year players and rookies
+2021-10-18 16:32:17 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:32:17 INFO::data check - Blake
+2021-10-18 16:32:17 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:32:17 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:32:17 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, NA)
+ 2021-10-18 16:32:17 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022")
+2021-10-18 16:32:17 INFO::lagging performance by one season
+2021-10-18 16:32:20 INFO::binding current season statistics and prior season statistics
+2021-10-18 16:32:20 INFO::data check
+2021-10-18 16:32:20 INFO::dropping all current season statistics
+2021-10-18 16:32:20 INFO::data check - Blake
+2021-10-18 16:32:20 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:32:20 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:32:20 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5)
+ 2021-10-18 16:32:20 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022")
+2021-10-18 16:32:20 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-18 16:32:20 INFO::creating set that keeps the rookies
+2021-10-18 16:32:20 INFO::writing lagged data sets
+2021-10-18 16:32:20 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-18 16:32:20 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-18 16:32:21 INFO::aggregating no rookies data set
+2021-10-18 16:32:21 INFO::aggregating rookies included data set
+2021-10-18 16:32:22 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-18 16:32:22 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-18 16:32:22 INFO::adding playoff wins to no rookies data set
+2021-10-18 16:32:22 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:32:22 INFO::adding playoff wins to data set with rookies
+2021-10-18 16:32:22 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:32:22 INFO::data check - wins
+2021-10-18 16:32:22 INFO::writing modeling data sets to .csv
+2021-10-18 16:38:53 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:38:53 INFO::New Season
+2021-10-18 16:38:54 INFO::Year: 2021
+2021-10-18 16:38:54 INFO::scraping upcoming season rosters
+2021-10-18 16:38:54 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2021-10-18 16:39:03 INFO::roster scrape complete
+2021-10-18 16:39:03 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:39:03 INFO::print(rosters %>% filter(Tm == "DAL")): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Luka Dončić", "Boban Marjanović", "Willie Cauley-Stein", "Jalen Brunson", "Eugene Omoruyi  (TW)", "Tyrell Terry", "Maxi Kleber", "JaQuori McLaughlin  (TW)", "Moses Brown", "Dorian Finney-Smith", "Frank Ntilikina", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 16:39:03 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 16:39:03 INFO::print(rosters %>% filter(Tm == "DAL")): c("2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022")
+2021-10-18 16:39:03 INFO::reading players_20212022.csv
+2021-10-18 16:39:03 INFO::data check - Blake Griffin
+2021-10-18 16:39:03 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:39:03 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 16:39:03 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 16:39:03 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:39:03 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:39:03 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:39:03 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:39:03 INFO::attaching rosters to players statistics
+2021-10-18 16:39:03 INFO::data check - Blake
+2021-10-18 16:39:03 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:39:03 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:39:03 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:39:03 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2018", "2019", "2020", "2021", "2021", "2022")
+2021-10-18 16:39:03 INFO::removing one year players and rookies
+2021-10-18 16:39:03 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:39:03 INFO::data check - Blake
+2021-10-18 16:39:03 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:39:03 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:39:03 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, NA)
+ 2021-10-18 16:39:03 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022")
+2021-10-18 16:39:03 INFO::lagging performance by one season
+2021-10-18 16:39:06 INFO::binding current season statistics and prior season statistics
+2021-10-18 16:39:06 INFO::data check
+2021-10-18 16:39:06 INFO::dropping all current season statistics
+2021-10-18 16:39:06 INFO::data check - Blake
+2021-10-18 16:39:06 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:39:06 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:39:06 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5)
+ 2021-10-18 16:39:06 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022")
+2021-10-18 16:39:06 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-18 16:39:06 INFO::creating set that keeps the rookies
+2021-10-18 16:39:07 INFO::writing lagged data sets
+2021-10-18 16:39:07 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-18 16:39:07 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-18 16:39:07 INFO::aggregating no rookies data set
+2021-10-18 16:39:08 INFO::aggregating rookies included data set
+2021-10-18 16:39:08 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-18 16:39:08 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-18 16:39:08 INFO::adding playoff wins to no rookies data set
+2021-10-18 16:39:08 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:39:08 INFO::adding playoff wins to data set with rookies
+2021-10-18 16:39:08 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:39:09 INFO::data check - wins
+2021-10-18 16:39:09 INFO::writing modeling data sets to .csv
+2021-10-18 16:41:49 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:41:49 INFO::New Season
+2021-10-18 16:41:49 INFO::Year: 2021
+2021-10-18 16:41:49 INFO::scraping upcoming season rosters
+2021-10-18 16:41:49 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2021-10-18 16:41:59 INFO::roster scrape complete
+2021-10-18 16:41:59 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:41:59 INFO::print(rosters %>% filter(Tm == "DAL")): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Luka Dončić", "Boban Marjanović", "Willie Cauley-Stein", "Jalen Brunson", "Eugene Omoruyi  (TW)", "Tyrell Terry", "Maxi Kleber", "JaQuori McLaughlin  (TW)", "Moses Brown", "Dorian Finney-Smith", "Frank Ntilikina", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 16:41:59 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 16:41:59 INFO::print(rosters %>% filter(Tm == "DAL")): c("2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022")
+2021-10-18 16:41:59 INFO::reading players_20212022.csv
+2021-10-18 16:41:59 INFO::data check - Blake Griffin
+2021-10-18 16:41:59 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:41:59 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 16:41:59 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 16:41:59 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:41:59 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:41:59 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:41:59 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:41:59 INFO::attaching rosters to players statistics
+2021-10-18 16:41:59 INFO::data check - Blake
+2021-10-18 16:41:59 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:41:59 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:41:59 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:41:59 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2018", "2019", "2020", "2021", "2021", "2022")
+2021-10-18 16:41:59 INFO::removing one year players and rookies
+2021-10-18 16:41:59 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:41:59 INFO::data check - Blake
+2021-10-18 16:41:59 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:41:59 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:41:59 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, NA)
+ 2021-10-18 16:41:59 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022")
+2021-10-18 16:41:59 INFO::lagging performance by one season
+2021-10-18 16:42:02 INFO::binding current season statistics and prior season statistics
+2021-10-18 16:42:02 INFO::data check
+2021-10-18 16:42:02 INFO::dropping all current season statistics
+2021-10-18 16:42:02 INFO::data check - Blake
+2021-10-18 16:42:02 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:42:02 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:42:02 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5)
+ 2021-10-18 16:42:02 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022")
+2021-10-18 16:42:02 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-18 16:42:02 INFO::creating set that keeps the rookies
+2021-10-18 16:42:02 INFO::writing lagged data sets
+2021-10-18 16:42:02 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-18 16:42:03 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-18 16:42:03 INFO::aggregating no rookies data set
+2021-10-18 16:42:04 INFO::aggregating rookies included data set
+2021-10-18 16:42:04 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-18 16:42:04 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-18 16:42:04 INFO::adding playoff wins to no rookies data set
+2021-10-18 16:42:04 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:42:04 INFO::adding playoff wins to data set with rookies
+2021-10-18 16:42:04 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:42:04 INFO::data check - wins
+2021-10-18 16:42:04 INFO::writing modeling data sets to .csv
+2021-10-18 16:44:52 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:44:52 INFO::New Season
+2021-10-18 16:44:52 INFO::Year: 2021
+2021-10-18 16:44:52 INFO::scraping upcoming season rosters
+2021-10-18 16:44:52 WARNING::MAKE SURE YOU DO NOT NEED TO MOD THE ROSTER
+2021-10-18 16:45:01 INFO::roster scrape complete
+2021-10-18 16:45:01 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:45:01 INFO::print(rosters %>% filter(Tm == "DAL")): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Luka Dončić", "Boban Marjanović", "Willie Cauley-Stein", "Jalen Brunson", "Eugene Omoruyi  (TW)", "Tyrell Terry", "Maxi Kleber", "JaQuori McLaughlin  (TW)", "Moses Brown", "Dorian Finney-Smith", "Frank Ntilikina", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 16:45:01 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 16:45:01 INFO::print(rosters %>% filter(Tm == "DAL")): c("2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2022")
+2021-10-18 16:45:01 INFO::reading players_20212022.csv
+2021-10-18 16:45:01 INFO::data check - Blake Griffin
+2021-10-18 16:45:01 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:45:01 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 16:45:01 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 16:45:01 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:45:01 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:45:01 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:45:01 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:45:01 INFO::attaching rosters to players statistics
+2021-10-18 16:45:01 INFO::data check - Blake
+2021-10-18 16:45:01 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:45:01 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:45:01 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:45:01 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2018", "2019", "2020", "2021", "2021", "2022")
+2021-10-18 16:45:01 INFO::removing one year players and rookies
+2021-10-18 16:45:01 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:45:01 INFO::data check - Blake
+2021-10-18 16:45:01 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:45:01 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:45:01 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, NA)
+ 2021-10-18 16:45:01 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022")
+2021-10-18 16:45:01 INFO::lagging performance by one season
+2021-10-18 16:45:04 INFO::binding current season statistics and prior season statistics
+2021-10-18 16:45:04 INFO::data check
+2021-10-18 16:45:04 INFO::dropping all current season statistics
+2021-10-18 16:45:04 INFO::data check - Blake
+2021-10-18 16:45:04 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:45:04 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:45:04 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5)
+ 2021-10-18 16:45:04 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2022")
+2021-10-18 16:45:04 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-18 16:45:04 INFO::creating set that keeps the rookies
+2021-10-18 16:45:05 INFO::writing lagged data sets
+2021-10-18 16:45:05 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-18 16:45:05 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-18 16:45:05 INFO::aggregating no rookies data set
+2021-10-18 16:45:06 INFO::aggregating rookies included data set
+2021-10-18 16:45:06 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-18 16:45:06 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-18 16:45:06 INFO::adding playoff wins to no rookies data set
+2021-10-18 16:45:06 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:45:06 INFO::adding playoff wins to data set with rookies
+2021-10-18 16:45:07 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:45:07 INFO::data check - wins
+2021-10-18 16:45:07 INFO::writing modeling data sets to .csv
+2021-10-18 16:46:03 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:46:03 INFO::New Season
+2021-10-18 16:46:03 INFO::Year: 2021
+2021-10-18 16:46:03 INFO::reading modded roster
+2021-10-18 16:46:03 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:46:35 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:46:35 INFO::New Season
+2021-10-18 16:46:35 INFO::Year: 2021
+2021-10-18 16:46:35 INFO::reading modded roster
+2021-10-18 16:46:35 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:46:35 INFO::print(rosters %>% filter(Tm == "DAL")): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 16:46:35 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 16:46:35 INFO::print(rosters %>% filter(Tm == "DAL")): c(2022, 2022, 2022, 2022, 2022, 2022, 2022)
+2021-10-18 16:46:35 INFO::reading players_20212022.csv
+2021-10-18 16:46:36 INFO::data check - Blake Griffin
+2021-10-18 16:46:36 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:46:36 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 16:46:36 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 16:46:36 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:46:36 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:46:36 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:46:36 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:46:36 INFO::attaching rosters to players statistics
+2021-10-18 16:46:36 INFO::data check - Blake
+2021-10-18 16:46:36 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:46:36 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:46:36 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:46:36 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2019, 2020, 2021, 2021, 2022)
+2021-10-18 16:46:36 INFO::removing one year players and rookies
+2021-10-18 16:46:36 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:46:36 INFO::data check - Blake
+2021-10-18 16:46:36 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:46:36 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:46:36 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, NA)
+ 2021-10-18 16:46:36 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022)
+2021-10-18 16:46:36 INFO::lagging performance by one season
+2021-10-18 16:46:39 INFO::binding current season statistics and prior season statistics
+2021-10-18 16:46:39 INFO::data check
+2021-10-18 16:46:39 INFO::dropping all current season statistics
+2021-10-18 16:46:39 INFO::data check - Blake
+2021-10-18 16:46:39 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:46:39 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:46:39 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5)
+ 2021-10-18 16:46:39 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022)
+2021-10-18 16:46:39 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-18 16:46:39 INFO::creating set that keeps the rookies
+2021-10-18 16:46:39 INFO::writing lagged data sets
+2021-10-18 16:46:39 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-18 16:46:39 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-18 16:46:39 INFO::aggregating no rookies data set
+2021-10-18 16:46:40 INFO::aggregating rookies included data set
+2021-10-18 16:46:41 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-18 16:46:41 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-18 16:46:41 INFO::adding playoff wins to no rookies data set
+2021-10-18 16:46:41 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:46:41 INFO::adding playoff wins to data set with rookies
+2021-10-18 16:46:41 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:46:41 INFO::data check - wins
+2021-10-18 16:46:41 INFO::writing modeling data sets to .csv
+2021-10-18 16:48:12 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:48:12 INFO::New Season
+2021-10-18 16:48:12 INFO::Year: 2021
+2021-10-18 16:48:12 INFO::reading modded roster
+2021-10-18 16:48:12 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:48:12 INFO::print(rosters %>% filter(Tm == "DAL")): Tim Hardaway Jr.
+ 2021-10-18 16:48:12 INFO::print(rosters %>% filter(Tm == "DAL")): DAL
+ 2021-10-18 16:48:12 INFO::print(rosters %>% filter(Tm == "DAL")): 2022
+2021-10-18 16:48:12 INFO::reading players_20212022.csv
+2021-10-18 16:48:13 INFO::data check - Blake Griffin
+2021-10-18 16:48:13 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:48:13 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 16:48:13 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 16:48:13 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:48:13 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:48:13 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:48:13 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:48:13 INFO::attaching rosters to players statistics
+2021-10-18 16:48:13 INFO::data check - Blake
+2021-10-18 16:48:13 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:48:13 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:48:13 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:48:13 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2019, 2020, 2021, 2021, 2022)
+2021-10-18 16:48:13 INFO::removing one year players and rookies
+2021-10-18 16:48:13 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:48:13 INFO::data check - Blake
+2021-10-18 16:48:13 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:48:13 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:48:13 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, NA)
+ 2021-10-18 16:48:13 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022)
+2021-10-18 16:48:13 INFO::lagging performance by one season
+2021-10-18 16:48:15 INFO::binding current season statistics and prior season statistics
+2021-10-18 16:48:15 INFO::data check
+2021-10-18 16:48:15 INFO::dropping all current season statistics
+2021-10-18 16:48:15 INFO::data check - Blake
+2021-10-18 16:48:16 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:48:16 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:48:16 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5)
+ 2021-10-18 16:48:16 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022)
+2021-10-18 16:48:16 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-18 16:48:16 INFO::creating set that keeps the rookies
+2021-10-18 16:48:16 INFO::writing lagged data sets
+2021-10-18 16:48:16 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-18 16:48:16 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-18 16:48:16 INFO::aggregating no rookies data set
+2021-10-18 16:48:17 INFO::aggregating rookies included data set
+2021-10-18 16:48:17 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-18 16:48:17 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-18 16:48:17 INFO::adding playoff wins to no rookies data set
+2021-10-18 16:48:17 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:48:17 INFO::adding playoff wins to data set with rookies
+2021-10-18 16:48:17 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:48:17 INFO::data check - wins
+2021-10-18 16:48:17 INFO::writing modeling data sets to .csv
+2021-10-18 16:53:25 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:53:25 INFO::New Season
+2021-10-18 16:53:25 INFO::Year: 2021
+2021-10-18 16:53:25 INFO::reading modded roster
+2021-10-18 16:53:25 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:53:25 INFO::print(rosters %>% filter(Tm == "DAL")): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Luka Dončić", "Boban Marjanović", "Willie Cauley-Stein", "Jalen Brunson", "Eugene Omoruyi  (TW)", "Tyrell Terry", "Maxi Kleber", "JaQuori McLaughlin  (TW)", "Moses Brown", "Dorian Finney-Smith", "Frank Ntilikina", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 16:53:25 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 16:53:25 INFO::print(rosters %>% filter(Tm == "DAL")): c(2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022)
+2021-10-18 16:53:25 INFO::reading players_20212022.csv
+2021-10-18 16:53:25 INFO::data check - Blake Griffin
+2021-10-18 16:53:25 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:53:25 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 16:53:25 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 16:53:25 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:53:25 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:53:25 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:53:25 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:53:25 INFO::attaching rosters to players statistics
+2021-10-18 16:53:25 INFO::data check - Blake
+2021-10-18 16:53:25 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:53:25 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:53:25 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:53:25 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2019, 2020, 2021, 2021, 2022)
+2021-10-18 16:53:25 INFO::removing one year players and rookies
+2021-10-18 16:53:25 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:53:26 INFO::data check - Blake
+2021-10-18 16:53:26 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:53:26 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:53:26 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, NA)
+ 2021-10-18 16:53:26 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022)
+2021-10-18 16:53:26 INFO::lagging performance by one season
+2021-10-18 16:53:28 INFO::binding current season statistics and prior season statistics
+2021-10-18 16:53:28 INFO::data check
+2021-10-18 16:53:28 INFO::dropping all current season statistics
+2021-10-18 16:53:28 INFO::data check - Blake
+2021-10-18 16:53:28 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:53:28 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:53:28 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5)
+ 2021-10-18 16:53:28 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022)
+2021-10-18 16:53:28 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-18 16:53:28 INFO::creating set that keeps the rookies
+2021-10-18 16:53:29 INFO::writing lagged data sets
+2021-10-18 16:53:29 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-18 16:53:29 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-18 16:53:29 INFO::aggregating no rookies data set
+2021-10-18 16:53:30 INFO::aggregating rookies included data set
+2021-10-18 16:53:30 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-18 16:53:30 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-18 16:53:30 INFO::adding playoff wins to no rookies data set
+2021-10-18 16:53:30 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:53:30 INFO::adding playoff wins to data set with rookies
+2021-10-18 16:53:30 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:53:30 INFO::data check - wins
+2021-10-18 16:53:30 INFO::writing modeling data sets to .csv
+2021-10-18 16:55:15 INFO::runId: /Users/jordanwegner/Desktop/nba2/logs/2021-10-18 run.log
+2021-10-18 16:55:15 INFO::New Season
+2021-10-18 16:55:15 INFO::Year: 2021
+2021-10-18 16:55:15 INFO::reading modded roster
+2021-10-18 16:55:15 INFO::Data check: Dallas Mavericks Roster
+2021-10-18 16:55:15 INFO::print(rosters %>% filter(Tm == "DAL")): c("Tim Hardaway Jr.", "Josh Green", "Dwight Powell", "Sterling Brown", "Trey Burke", "Luka Dončić", "Boban Marjanović", "Willie Cauley-Stein", "Jalen Brunson", "Eugene Omoruyi  (TW)", "Tyrell Terry", "Maxi Kleber", "JaQuori McLaughlin  (TW)", "Moses Brown", "Dorian Finney-Smith", "Frank Ntilikina", "Reggie Bullock", "Kristaps Porziņģis")
+ 2021-10-18 16:55:15 INFO::print(rosters %>% filter(Tm == "DAL")): c("DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL", "DAL")
+ 2021-10-18 16:55:15 INFO::print(rosters %>% filter(Tm == "DAL")): c(2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022)
+2021-10-18 16:55:15 INFO::reading players_20212022.csv
+2021-10-18 16:55:15 INFO::data check - Blake Griffin
+2021-10-18 16:55:15 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:55:15 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "TOT", "DET", "DET", "BRK", "DET", "TOT")
+ 2021-10-18 16:55:15 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 21.4, 24.5, 15.5, 10, 12.3, 11)
+ 2021-10-18 16:55:15 INFO::c("print(players %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2018, 2019, 2020, 2021, 2021, 2021)
+2021-10-18 16:55:16 INFO::assigning current teams via new roster scrape, cleaning data
+2021-10-18 16:55:16 INFO::dropping rows with a TOT assignment as a result of being traded
+2021-10-18 16:55:16 INFO::setting missing values to be 0 (assuming they are either percentages or do not occurr in game)
+2021-10-18 16:55:16 INFO::attaching rosters to players statistics
+2021-10-18 16:55:16 INFO::data check - Blake
+2021-10-18 16:55:16 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:55:16 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "LAC", "DET", "DET", "BRK", "DET", "BRK")
+ 2021-10-18 16:55:16 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 19.8, 22.6, 24.5, 15.5, 10, 12.3, NA)
+ 2021-10-18 16:55:16 INFO::c("print(p3 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2018, 2019, 2020, 2021, 2021, 2022)
+2021-10-18 16:55:16 INFO::removing one year players and rookies
+2021-10-18 16:55:16 INFO::player trades cause problems. Time to remove.
+2021-10-18 16:55:16 INFO::data check - Blake
+2021-10-18 16:55:16 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:55:16 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:55:16 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5, NA)
+ 2021-10-18 16:55:16 INFO::c("print(p4 %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022)
+2021-10-18 16:55:16 INFO::lagging performance by one season
+2021-10-18 16:55:19 INFO::binding current season statistics and prior season statistics
+2021-10-18 16:55:19 INFO::data check
+2021-10-18 16:55:19 INFO::dropping all current season statistics
+2021-10-18 16:55:19 INFO::data check - Blake
+2021-10-18 16:55:19 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin", "Blake Griffin")
+ 2021-10-18 16:55:19 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c("LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "LAC", "DET", "DET", "BRK")
+ 2021-10-18 16:55:19 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(NA, 22.5, 20.7, 18, 24.1, 21.9, 21.4, 21.6, 24.5, 15.5)
+ 2021-10-18 16:55:19 INFO::c("print(bound_test %>% filter(Player == \"Blake Griffin\") %>% subset(select = c(Player, ", "    Tm, PTS_prior, year)))"): c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022)
+2021-10-18 16:55:19 INFO::creating data set that drops players with no prior year, ie rookies
+2021-10-18 16:55:19 INFO::creating set that keeps the rookies
+2021-10-18 16:55:19 INFO::writing lagged data sets
+2021-10-18 16:55:19 INFO::writing per_game_and_advanced_lagged_no_rookies_20212022.csv
+2021-10-18 16:55:19 INFO::writing per_game_and_advanced_lagged_with_rookies_20212022.csv
+2021-10-18 16:55:20 INFO::aggregating no rookies data set
+2021-10-18 16:55:20 INFO::aggregating rookies included data set
+2021-10-18 16:55:21 INFO::changing NOK to NOH (Hurrican Katrina) -- no rookies
+2021-10-18 16:55:21 INFO::changing NOK to NOH (Hurrican Katrina) -- rookies
+2021-10-18 16:55:21 INFO::adding playoff wins to no rookies data set
+2021-10-18 16:55:21 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:55:21 INFO::adding playoff wins to data set with rookies
+2021-10-18 16:55:21 INFO::setting non-playoff teams win total to 0 for both data sets and cleaning current season names
+2021-10-18 16:55:21 INFO::data check - wins
+2021-10-18 16:55:21 INFO::writing modeling data sets to .csv
