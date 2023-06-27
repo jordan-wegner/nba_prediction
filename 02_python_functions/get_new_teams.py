@@ -15,7 +15,7 @@ def get_new_teams():
     if old_teams.shape[0]>=new_teams.shape[0]:
         print ("No new teams to add. No update required.")
     else:
-        old_file_id = "/users/jordanwegner/Desktop/nba2/03_data/00_archive/teams_"+ (datetime.datetime.today () - timedelta(1)).strftime('%Y%m%d')+".csv"
+        old_file_id = "/users/jordanwegner/Desktop/nba2/03_data/00_archive/teams_"+ (datetime.datetime.today() - timedelta(1)).strftime('%Y%m%d')+".csv"
         old_teams.to_csv(old_file_id, index=False)
         new_teams = new_teams[~new_teams['id'].isin(old_teams['id'])].copy()
         updated_teams = pd.concat([old_teams, new_teams])
