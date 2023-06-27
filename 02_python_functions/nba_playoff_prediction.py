@@ -4,6 +4,7 @@ import get_new_seasons
 import get_new_rosters
 import get_new_game_ids
 import get_new_draft
+import get_new_playoff_wins
 
 import pandas as pd
 import numpy as np 
@@ -39,6 +40,9 @@ print("BEGIN: get_new_draft.py")
 get_new_draft.get_new_draft.py
 print("END: get_new_draft.py") 
 
+print("BEGIN: get_new_playoff_wins.py")
+get_new_playoff_wins.get_new_playoff_wins.py
+print("END: get_new_playoff_wins.py") 
 
 
 
