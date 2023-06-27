@@ -1,3 +1,5 @@
+import pandas as pd 
+
 def IDSetup(gids_data,rosters_data):
     # takes the gids data and rosters data as input 
     # outputs the rosters with the game ids 
