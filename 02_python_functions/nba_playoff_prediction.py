@@ -2,6 +2,7 @@ import get_new_players
 import get_new_teams
 import get_new_seasons
 import get_new_rosters
+import get_new_game_ids
 
 import pandas as pd
 import numpy as np 
@@ -29,6 +30,7 @@ print("BEGIN: get_new_rosters.py")
 get_new_rosters.get_new_rosters(seasons,teams)
 print("END: get_new_rosters.py")
 
-print("READING: /users/jordanwegner/Desktop/nba2/03_data/rosters.csv")
-rosters = pd.read_csv("/users/jordanwegner/Desktop/nba2/03_data/rosters.csv")
+print("BEGIN: get_new_game_ids.py")
+get_new_game_ids.get_new_game_ids.py
+print("END: get_new_game_ids.py")
 
