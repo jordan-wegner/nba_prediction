@@ -1,3 +1,6 @@
+import pandas as pd
+from nba_api.stats.endpoints import boxscorefourfactorsv2
+
 def hit_boxscorefourfactorsv2(gs):
     # takes the game id data as input 
     # returns the four factors data for each player in each game
