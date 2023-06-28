@@ -33,15 +33,15 @@ get_new_rosters.get_new_rosters(seasons,teams)
 print("END: get_new_rosters.py")
 
 print("BEGIN: get_new_game_ids.py")
-get_new_game_ids.get_new_game_ids.py
+get_new_game_ids.get_new_game_ids()
 print("END: get_new_game_ids.py")
 
 print("BEGIN: get_new_draft.py")
-get_new_draft.get_new_draft.py
+get_new_draft.get_new_draft()
 print("END: get_new_draft.py") 
 
 print("BEGIN: get_new_playoff_wins.py")
-get_new_playoff_wins.get_new_playoff_wins.py
+get_new_playoff_wins.get_new_playoff_wins()
 print("END: get_new_playoff_wins.py") 
 
 
