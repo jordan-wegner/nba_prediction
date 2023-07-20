@@ -5,6 +5,7 @@ import get_new_rosters
 import get_new_game_ids
 import get_new_draft
 import get_new_playoff_wins
+import get_new_boxscorefourfactors
 
 import pandas as pd
 import numpy as np 
@@ -29,7 +30,7 @@ print("READING: /users/jordanwegner/Desktop/nba2/03_data/teams.csv")
 teams = pd.read_csv("/users/jordanwegner/Desktop/nba2/03_data/teams.csv")
 
 print("BEGIN: get_new_rosters.py")
-get_new_rosters.get_new_rosters(seasons,teams)
+#get_new_rosters.get_new_rosters(seasons,teams)
 print("END: get_new_rosters.py")
 
 print("BEGIN: get_new_game_ids.py")
@@ -44,6 +45,9 @@ print("BEGIN: get_new_playoff_wins.py")
 get_new_playoff_wins.get_new_playoff_wins()
 print("END: get_new_playoff_wins.py") 
 
+print("READING: /users/jordanwegner/Desktop/nba2/03_data/game_ids.csv")
+gids = pd.read_csv("/users/jordanwegner/Desktop/nba2/03_data/game_ids.csv")
 
-
-
+print("BEGIN: get_new_boxscorefourfactors.py")
+get_new_boxscorefourfactors.get_new_boxscorefourfactors(gids)
+print("END: get_new_boxscorefourfactors.py")
