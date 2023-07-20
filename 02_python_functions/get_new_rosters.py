@@ -32,12 +32,20 @@ def get_new_rosters(seasons,teams):
     # height in inches because excel is stupid 
     print("Getting height in inches")
     height = roster5['HEIGHT'].str.split('-')
+    # have to deal with None populations 
+    nh = []
+    for i in height: 
+        if i == None:
+            x = ['0','0']
+        else: 
+            x = i 
+        nh.append(x)
     def height_inches(h):
         h1 = int(float(h[0]))
         h2 = int(float(h[1]))
         height = h1*12+h2
         return height
-    heights = [height_inches(i) for i in height]
+    heights = [height_inches(i) for i in nh]
     roster5['HEIGHT_INCHES'] = heights
     print("height calculation complete")
     updated_rosters = pd.concat([old,roster5])
