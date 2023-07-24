@@ -49,5 +49,6 @@ print("READING: /users/jordanwegner/Desktop/nba2/03_data/game_ids.csv")
 gids = pd.read_csv("/users/jordanwegner/Desktop/nba2/03_data/game_ids.csv")
 
 print("BEGIN: get_new_boxscorefourfactors.py")
-get_new_boxscorefourfactors.get_new_boxscorefourfactors(gids)
+gotten_or_error = ['G0020300778'] # ids to skip 
+get_new_boxscorefourfactors.get_new_boxscorefourfactors(gids,gotten_or_error)
 print("END: get_new_boxscorefourfactors.py")
