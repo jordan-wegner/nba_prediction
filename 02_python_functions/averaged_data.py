@@ -9,7 +9,7 @@ def averaged_data(data,game_ids):
     print("player data shape: {}".format(data.shape))
    
     print("merging seasons to the player data via game_id data frame")
-    df2 = data.merge(gids[['GAME_ID','SEASON_YEAR']],how='left',on='GAME_ID').drop_duplicates()
+    df2 = data.merge(game_ids[['GAME_ID','SEASON_YEAR']],how='left',on='GAME_ID').drop_duplicates()
     print("dropping duplicates")
     print("new shape (should match the old one): {}".format(df2.shape))
     drops = ['GAME_ID','TEAM_ABBREVIATION','TEAM_CITY','PLAYER_NAME','NICKNAME','START_POSITION','COMMENT']
