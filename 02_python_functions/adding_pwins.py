@@ -1,3 +1,5 @@
+import pandas as pd
+
 def adding_pwins(data,playoff_wins):
     # takes the lagged data and the playoff wins as input 
     # outputs playoff wins in with the data set 
