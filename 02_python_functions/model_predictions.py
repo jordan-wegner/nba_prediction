@@ -5,7 +5,7 @@ import numpy as np
 
 ## Model Selection  
 
-model_name = input()
+model_name = input("model name: ")
 
 init_path = '/Users/jordanwegner/Desktop/nba2/05_notebooks/01_models/01_model_outputs/'
 predictions_path = init_path+model_name+'_full_predictions.csv'
