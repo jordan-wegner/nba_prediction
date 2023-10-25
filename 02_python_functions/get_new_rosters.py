@@ -22,7 +22,7 @@ def get_new_rosters(seasons,teams):
     for i in list(teams['id']):
         ctr_j = commonteamroster.CommonTeamRoster(team_id=i,season=current_season,league_id_nullable='00').get_data_frames()[0]
         ctr_list.append(ctr_j)
-        time.sleep(.600) # had to do this to avoid the api timeout
+        time.sleep(150) # had to do this to avoid the api timeout
         print("Team: {}, Done.".format(i))
     # should always get rosters for 30 teams 
     if len(ctr_list)!=30:
